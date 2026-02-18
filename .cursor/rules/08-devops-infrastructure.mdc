@@ -1,0 +1,19 @@
+---
+alwaysApply: true
+---
+
+Metadata: Version: 1.0.0 | Last Updated: 18-02-2026
+
+# DevOps & Docker Infrastructure
+- **Containerization**: Use Docker for local development and production parity.
+- **Docker Compose**: Maintain a `docker-compose.yml` for multi-service orchestration (React frontend, Node.js backend, Database).
+- **Dockerfile Standards**:
+  - Use multi-stage builds for React to minimize image size.
+  - Use lightweight base images (e.g., `node:alpine`).
+  - Ensure `.dockerignore` excludes `node_modules` and local logs.
+- **Environment Variables**: Use `.env.example` as a template for all required variables.
+- **QA Integration**: The @04-qa-agent.mdc should ideally run tests inside the container using `docker exec`.
+
+### TOKEN_SAVING_PROTOCOL:
+- Do not repeat standard Docker commands.
+- Focus instructions on service dependencies and port mappings.

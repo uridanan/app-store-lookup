@@ -1,0 +1,17 @@
+Metadata: Version: 1.0.0 | Last Updated: 18-02-2026
+
+# GLOBAL CONSTITUTION
+- **Mode**: Always prioritize Worktree isolation.
+- **Brevity**: Output Priority: Terminal > File Writes > Status. No conversational filler.
+- **Tech Stack**: React (Functional/Hooks), Node.js, Tailwind CSS.
+- **Priority**: Desktop/Laptop optimization (High Density UI) over mobile.
+- **Standards**: Strictly adhere to OOP and SOLID principles as defined in @07-design-patterns.mdc.
+- **TDD**: Never write logic before a failing test exists.
+- **Efficiency**: Use `// ... existing code ...` to avoid re-writing large files.
+- **Workflow**: All tasks must follow @00-orchestrator.mdc.
+- **Handoffs**: Sub-agents must signal completion with "NEXT: @[agent].mdc".
+- **Environment**: Full Dockerization required. All services must be accessible via docker-compose. Refer to @08-devops-infrastructure.mdc.
+
+
+
+

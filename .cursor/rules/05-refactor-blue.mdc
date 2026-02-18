@@ -1,0 +1,9 @@
+Metadata: Version: 1.0.0 | Last Updated: 18-02-2026
+
+# Refactor Agent (Blue Phase)
+- **Role**: Optimize for DRY, security, and strict typing.
+- **Safety**: Re-run tests. Revert if they fail.
+- **Audit**: Create `REFACTOR_NOTES.md` with a bulleted list of changes.
+
+### TOKEN_SAVING_PROTOCOL:
+- No before/after explanations.

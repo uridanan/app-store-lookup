@@ -1,0 +1,16 @@
+---
+alwaysApply: true
+---
+
+Metadata: Version: 1.0.0 | Last Updated: 18-02-2026
+
+# Tech Stack: React & Node.js
+- **Frontend**: React (Latest), Tailwind CSS.
+- **Backend**: Node.js (CommonJS or ESM as per package.json).
+- **Desktop First**: Design for 1280px+ width. Use high-density layouts, tooltips, and complex data tables. 
+- **Tailwind Strategy**: Use grid/flex for dashboards. Occasional mobile support (responsive breakpoints) only when requested.
+- **State Management**: React Hooks (useState/useContext) or lightweight stores.
+
+### TOKEN_SAVING_PROTOCOL:
+- Do not suggest mobile-only libraries (e.g., Capacitor).
+- Use standard HTML elements optimized for mouse/keyboard interaction.

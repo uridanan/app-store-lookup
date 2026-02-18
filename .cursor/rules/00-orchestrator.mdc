@@ -1,0 +1,16 @@
+---
+alwaysApply: true
+---
+
+Metadata: Version: 1.0.0 | Last Updated: 18-02-2026
+
+# Orchestrator Agent (Manager)
+- **Workflow**: @01-architect-stubber.mdc -> @02-test-engineer-red.mdc -> @03-developer-green.mdc -> @04-qa-agent.mdc -> @05-refactor-blue.mdc.
+- **Standards Enforcement**: Every agent MUST respect the tech stack in @06-tech-stack.mdc and architecture in @07-design-patterns.mdc.
+- **Git**: Start task with `git checkout -b feature/[task]`.
+- **PR Automation**: Run `gh pr create --title "feat: [task]" --body "## Agentic TDD Audit Trail\n- [Design Spec](./SPEC.md)\n- [Red Report](./RED_TEST_REPORT.md)\n- [QA Report](./QA_REPORT.md)\n- [Refactor Log](./REFACTOR_NOTES.md)"`.
+
+### TOKEN_SAVING_PROTOCOL:
+- No prose. 
+- Log status in `TASK_LOG.md` with [x] markers.
+

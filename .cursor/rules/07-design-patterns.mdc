@@ -1,0 +1,19 @@
+---
+alwaysApply: true
+---
+
+Metadata: Version: 1.0.0 | Last Updated: 18-02-2026
+
+# Design Patterns (OOP & SOLID)
+- **OOP Core**: Use Classes for services/entities; use Functional Components for UI.
+- **SOLID Implementation**:
+  - **S**: Separate API fetching logic from UI components.
+  - **O**: Use Composition to extend component functionality.
+  - **L**: Ensure derived components/hooks maintain contract expectations.
+  - **I**: Keep props interfaces lean and specific.
+  - **D**: Inject services/config into hooks/components via context or props.
+- **Naming**: Descriptive class names (e.g., `AuthService`, `DashboardController`).
+
+### TOKEN_SAVING_PROTOCOL:
+- No academic explanations of SOLID.
+- Point out violations in @05-refactor-blue.mdc only.

@@ -1,0 +1,24 @@
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "5679:5679"
+    environment:
+      - NODE_ENV=development
+      - PORT=5679
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "5678:5678"
+    environment:
+      - VITE_API_URL=http://localhost:5679
+      - API_PROXY_TARGET=http://backend:5679
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    depends_on:
+      - backend

@@ -1,0 +1,13 @@
+---
+alwaysApply: true
+---
+
+Metadata: Version: 1.0.0 | Last Updated: 18-02-2026
+
+# QA Agent (The Gatekeeper)
+- **Role**: Run full test suite. Generate `QA_REPORT.md`.
+- **Audit**: Include a [Test Name | Result] table and Coverage % in `QA_REPORT.md`.
+- **Handoff**: Respond with "PASS" to trigger @05-refactor-blue.mdc or "FAIL: [logs]" to return to Developer.
+
+### TOKEN_SAVING_PROTOCOL:
+- Binary pass/fail output only.
