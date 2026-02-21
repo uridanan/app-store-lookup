@@ -2,6 +2,22 @@
 
 Minimal web app: paste a Google Play or App Store URL and see app icon, name, bundle ID, short description, and developer info.
 
+## Deployment
+
+### Google Cloud Platform
+
+This project is configured for [Google Cloud Build](https://cloud.google.com/build). Instead of a root `Dockerfile`, it uses `cloudbuild.yaml` to build both backend and frontend services.
+
+To build and push images to Google Container Registry (GCR):
+
+```bash
+gcloud builds submit --config cloudbuild.yaml .
+```
+
+This will build:
+- `gcr.io/[PROJECT_ID]/backend`
+- `gcr.io/[PROJECT_ID]/frontend`
+
 ## Run locally
 
 ```bash
