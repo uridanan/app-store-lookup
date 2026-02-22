@@ -1,5 +1,5 @@
 # Stage 1: Build Frontend
-FROM node:18-alpine AS frontend-builder
+FROM node:20-alpine AS frontend-builder
 WORKDIR /app/frontend
 COPY frontend/package*.json ./
 RUN npm ci
@@ -7,7 +7,7 @@ COPY frontend/ ./
 RUN npm run build
 
 # Stage 2: Bundle everything
-FROM node:18-alpine
+FROM node:20-alpine
 WORKDIR /app
 # We are currently in the root, so we copy backend files
 COPY backend/package*.json ./
