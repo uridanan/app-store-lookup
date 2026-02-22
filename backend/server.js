@@ -24,4 +24,14 @@ app.get('*', (req, res) => {
 });
 
 const PORT = process.env.PORT || 8080;
-app.listen(PORT, () => console.log(`Server listening on ${PORT}`));
+const HOST = '0.0.0.0'; // Necessary for Cloud Run
+
+const server = app.listen(PORT, HOST, () => {
+    console.log(`Server listening on http://${HOST}:${PORT}`);
+    console.log('Static files served from:', publicPath);
+});
+
+server.on('error', (err) => {
+    console.error('Server failed to start:', err);
+    process.exit(1);
+});
