@@ -15,6 +15,7 @@ services:
     ports:
       - "5678:5678"
     environment:
+      - PORT=5678
       - VITE_API_URL=http://localhost:5679
       - API_PROXY_TARGET=http://backend:5679
     volumes:

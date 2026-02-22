@@ -22,7 +22,7 @@ steps:
       - '--platform'
       - 'managed'
       - '--port'
-      - '5679'
+      - '8080'
       - '--allow-unauthenticated'
     id: 'deploy-backend'
     waitFor: ['push-backend']
@@ -51,7 +51,7 @@ steps:
       - '--platform'
       - 'managed'
       - '--port'
-      - '5678'
+      - '8080'
       - '--allow-unauthenticated'
     id: 'deploy-frontend'
     waitFor: ['push-frontend']

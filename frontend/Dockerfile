@@ -12,8 +12,9 @@ COPY --from=builder /app/dist /usr/share/nginx/html
 # Default Nginx configuration uses port 80, but we'll configure Cloud Run to use 5678
 # Custom nginx config to handle SPA routing if needed
 # Copy a template for the nginx config
+# The default nginx template system replaces $PORT and other variables
 RUN mkdir -p /etc/nginx/templates && echo 'server { \
-    listen 5678; \
+    listen ${PORT}; \
     location / { \
     root /usr/share/nginx/html; \
     index index.html index.htm; \
@@ -24,5 +25,6 @@ RUN mkdir -p /etc/nginx/templates && echo 'server { \
     } \
     }' > /etc/nginx/templates/default.conf.template
 
-EXPOSE 5678
+ENV PORT=8080
+EXPOSE 8080
 CMD ["nginx", "-g", "daemon off;"]
